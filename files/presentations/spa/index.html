@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>single page applications</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="Ben Ripkens" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet/less" type="text/css" href="css/steps.less">
+    <script src="js/less-1.2.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+    
+    <div id="title" class="step" data-x="-3000" data-y="-3000" data-scale="3">
+        single page applications
+        
+        <div class="presenter">Ben Ripkens</div>
+        <div class="date">March 2012</div>
+    </div>
+    
+    <div id="what" class="step" data-x="-1200" data-y="-3000">
+        What is a <em>SPA</em><sup>*</sup>?
+        <span class="footnote"><sup>*</sup>single page application</span>
+    </div>
+    
+    <div id="characteristics" class="step" data-x="-1000" data-y="-2300">
+        Characteristics
+        <ul>
+            <li>Few to no page reloads</li>
+            <li>A fair amount of logic is executed on client-side</li>
+            <li>Server-side complexity is reduced</li>
+        </ul>
+    </div>
+    
+    <div id="examples" class="step" data-x="0" data-y="-3000">
+        A few examples
+        
+        <img src="img/gmail.png" class="gmail" />
+        <img src="img/ft.jpg" class="ft" />
+        <img src="img/foursquare.png" class="fq" />
+        <img src="img/linkedin.png" class="linkedin" />
+        <img src="img/wunderkit.png" class="wunderkit" />
+    </div>
+    
+    <div id="mobile" class="step" data-x="0" data-y="-2300">
+        SPA to replace mobile (native) apps
+        
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=JTywh4QJWMM"
+                title="See the new Financial Times web app"
+                target="_blank">
+            <img src="img/ft-youtube.png" />
+        </a>
+    </div>
+    
+    <div id="arch1" class="step arch" data-x="0" data-y="-1600">
+        <div class="box browser">
+            <span class="title">Browser</span>
+            
+            <span class="action">renders</span>
+            <img src="img/html.png" />
+            
+            <div class="down-request"></div>
+        </div>
+        <div class="box server">
+            <span class="title">Server</span>
+            
+            <span class="action">generates</span>
+            <img src="img/html.png" />
+            
+            <div class="down-request"></div>
+            <!--<div class="up-result"></div>-->
+        </div>
+        <div class="box db">
+            <img src="img/database.png" />
+            <!--<div class="up-result"></div>-->
+        </div>
+    </div>
+    
+    <div id="arch2" class="step arch" data-x="0" data-y="-1600">
+        <div class="box browser">
+            <span class="action">generates and renders</span>
+            <!--<div class="down-result"></div>-->
+        </div>
+        <div class="box server">
+            <div class="json">
+                <span class="js-punctuation" style="">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="js-string">"name"</span>:
+                    <span class="js-string">"John Doe"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="js-string">"message"</span>:
+                    <span class="js-string">"Hello students!"</span><br>
+                    }
+            </div>
+            
+            <div class="up-result"></div>
+        </div>
+    </div>
+    
+    <div id="conclusion" class="step" data-x="-1000" data-y="-1200">
+        What about tool support, libraries, frameworks?
+    </div>
+    
+    <div id="thoughtworks" class="step" data-x="-2200" data-y="-1200">
+        <h1>ThoughtWorks Tech Radar 03/2012</h1>
+        <ul>
+            <li>Treat JavaScript as a <em>first class</em> language</li>
+            <li>JavaScript micro frameworks</li>
+            <li>Client-side MVC</li>
+        </ul>
+    </div>
+    
+    <div id="contact" class="step" data-x="-3000" data-y="-2000" data-scale="3">
+        <p class="thanks">Thanks!</p>
+        
+        <p class="presenter">Ben Ripkens</p>
+        <p class="email">
+            <a href="mailto:bripkens.dev@gmail.com" class="email">
+                bripkens.dev@gmail.com
+            </a>
+        </p>
+        <p class="web">
+            <a href="http://bripkens.de" class="web">bripkens.de</span>
+        </p>
+        
+    </div>
+    
+    <div id="overview" class="step" data-x="-1800" data-y="-2100" data-scale="5">
+    </div>
+
+</div>
+
+
+
+<script src="js/impress.js"></script>
+<script>
+    impress().ignoreKeyCodes( 116 );
+</script>
+</body>
+</html>

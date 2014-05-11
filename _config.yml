@@ -8,4 +8,5 @@ url: "http://yourdomain.com"
 
 # Build settings
 markdown: kramdown
-permalinks: pretty
+# permalinks: pretty
+permalink: /:year/:month/:title

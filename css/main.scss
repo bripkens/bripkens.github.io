@@ -1,0 +1,307 @@
+---
+---
+@import "boilerplate", "syntax";
+
+// ###################
+//    Variables
+// ###################
+$textColor: #333;
+$textLightGray: #777;
+
+$linkColor: #08c;
+$linkColorHover: darken($linkColor, 15%);
+
+
+// ###################
+//    Generic
+// ###################
+body {
+  font-family: sans-serif;
+  color: $textColor;
+  overflow-y: scroll;
+  background: #FBFBFB;
+}
+
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+a, a:visited {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkColorHover;
+    text-decoration: underline;
+  }
+}
+
+h1, h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+header, #content, footer {
+  width: 95%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+
+  h1 {
+    padding-top: 0.5em;
+
+    a {
+      font-size: 1.5em;
+      text-shadow: 0.05em 0.05em #DDD;
+      color: $textColor;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $textColor;
+      }
+    }
+  }
+
+  .social {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      background: url(../img/sprite.png);
+    }
+
+    a {
+      display: block;
+      font-size: 0;
+      text-indent: -9999px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .github {
+      background-position: -32px 0px;
+    }
+
+    .xing {
+      background-position: -32px -32px;
+    }
+
+    .linkedin {
+      background-position: -64px 0px;
+    }
+
+    .twitter {
+      background-position: 0 -32px;
+    }
+
+    .googleplus {
+      background-position: -64px -32px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  header .social {
+    position: static;
+  }
+}
+
+.inlineCode {
+  font-family: 'monaco','inconsolata',monospace, serif;
+  background: #ddd;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+// ###################
+//    Start page
+// ###################
+#home {
+  .posts {
+    padding: 0;
+
+    li {
+      list-style: none;
+      border-top: 1px dashed #AAA;
+      padding: 0.5em 1em;
+      position: relative;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      span {
+        color: #777;
+        position: absolute;
+        left: 10px;
+      }
+
+      a {
+        float: left;
+        margin-left: 7em;
+      }
+    }
+  }
+}
+
+// ###################
+//    About page
+// ###################
+.about {
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: 1em;
+  background: #eee;
+  text-align: justify;
+
+  div {
+    width: 100px;
+    height: 100px;
+    background: url(../img/sprite.png);
+    background-position: 100px 0px;
+    float: left;
+    margin: 0 0.5em 0 0;
+    text-indent: -9999px;
+    font-size: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #222;
+  }
+}
+
+// ###################
+//    Posts page
+// ###################
+a.back {
+  margin: 0.5em 0 0 0;
+}
+
+#post {
+  img.cover {
+    border-radius: 1em;
+    box-shadow: 0px 0px 4px 4px #aaa;
+  }
+
+  .crossPost {
+    font-style: italic;
+  }
+
+  .formatEmAsCode em {
+    background: #eee;
+    font-family: Monospace;
+    font-style: normal;
+  }
+
+  & > h1 {
+    margin: 2.5em 0 0.5em;
+
+    &:first-child {
+      margin-top: 1.5em;
+    }
+  }
+
+  & > span {
+    color: $textLightGray;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  & > div {
+    text-align: justify;
+  }
+
+  .content {
+    iframe {
+      margin: 1em auto;
+      display: block;
+    }
+
+    img {
+      max-width:100%;
+      height:auto;
+      margin: 1em auto;
+      display: block;
+    }
+
+    .gist {
+      margin: 1.5em 0;
+
+      .gist-file .gist-meta {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+
+#tags {
+  font-size: 0.8em;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+#related {
+  margin: 2em 0 0;
+}
+
+#comments {
+  margin: 2em 0 0;
+}
+
+// ###################
+//    iPad page
+// ###################
+#post .apps {
+  & > div {
+    border-top: 1px solid #ddd;
+    padding: 1em 1em 1em 0;
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    img {
+      float: left;
+      width: 100px;
+      height: auto;
+      margin: 0 1em;
+    }
+
+    h2 {
+      font-size: 1.1em;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link href="{{site.baseurl}}/atom.xml" rel="alternate" title="just ben's blog" type="application/atom+xml" />
+  <link href="{{site.baseurl}}/feed.xml" rel="alternate" title="just ben's blog" type="application/atom+xml" />
 
   <title>{{ page.title }} - Ben Ripkens (bripkens)</title>
 
@@ -14,11 +14,7 @@
   <meta name="description" content="{{ page.description }}">
   {% endif %}
 
-  {% if site.production %}
-  <link rel="stylesheet" href="{{site.baseurl}}/css/main_{% cache_bust %}.css" type="text/css" />
-  {% else %}
   <link rel="stylesheet" href="{{site.baseurl}}/css/main.css" type="text/css" />
-  {% endif %}
 </head>
 <body>
 <header>

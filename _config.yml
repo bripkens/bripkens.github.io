@@ -1,12 +1,15 @@
 # Site settings
-name: Dat site title tho
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+name: Ben Ripkens
+title: Ben's blog
+email: bripkens.dev@gmail.com
+description: ""
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://blog.bripkens.de"
 
 # Build settings
 markdown: kramdown
-# permalinks: pretty
 permalink: /:year/:month/:title
+
+# The tag cloud plugin cannot be used on GitHub. Deactivate tag links
+# until GitHub pages supports such a plugin
+showTagLinks: false

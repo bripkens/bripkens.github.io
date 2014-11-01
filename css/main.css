@@ -697,7 +697,6 @@ header {
 .about {
   margin: 2em 0;
   padding: 1em;
-  border-radius: 1em;
   background: #eee;
   text-align: justify; }
   .about div {
@@ -708,9 +707,7 @@ header {
     float: left;
     margin: 0 0.5em 0 0;
     text-indent: -9999px;
-    font-size: 1;
-    border-radius: 5px;
-    box-shadow: 0 0 1px #222; }
+    font-size: 1; }
 
 a.back {
   margin: 0.5em 0 0 0; }
